@@ -1,0 +1,4 @@
+Using simulator: Thumb Sim
+Using model: Hamming Weight
+Starting... (0.0%)
+kqlezkizpclnpdlr

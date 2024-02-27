@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{url,amsmath,setspace,amssymb}
+\usepackage{listings}
+
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage{xcolor}
+
+
+\usepackage{color}
+\def\R{\color{red}}
+\def\B{\color{blue}}
+
+\usepackage{listings}
+\usepackage{caption}
+
+
+
+%**********************************************
+%* Leave the page configuration as is
+\setlength{\oddsidemargin}{.25in}
+\setlength{\evensidemargin}{.25in}
+\setlength{\textwidth}{6.25in}
+\setlength{\topmargin}{-0.4in}
+\setlength{\textheight}{8.5in}
+
+\newcommand{\heading}[5]{
+\renewcommand{\thepage}{#1-\arabic{page}}
+\noindent
+\begin{center}
+	\framebox[\textwidth]{
+	\begin{minipage}{0.9\textwidth} \onehalfspacing
+	{\bf 622.755 -- \unitname} \hfill #2
+
+	{\centering \Large #5
+
+	}\medskip
+	{#3 \hfill #4}
+	\end{minipage}
+}
+\end{center}
+}
+
+%**********************************************
+
+
+%**********************************************
+%* Some more or less useful stuff
+
+\lstnewenvironment{myalgorithm}[1][] %defines the algorithm listing environment
+{
+   % \captionsetup{labelformat=algocaption,labelsep=colon}
+    \lstset{ %this is the stype
+        mathescape=true,
+        frame=none,
+        numbers=none,
+        basicstyle=\normalsize,
+        keywordstyle=\color{black}\bfseries\em,
+        keywords={,input, output, return, datatype, function, in, if, else, foreach, while, begin, end, },
+        numbers=left,
+        xleftmargin=.04\textwidth,
+        #1 % this is to add specific settings to an usage of this environment (for instance, the caption and referable label)
+    }
+}
+{}
+
+
+\newcommand{\unitname}{Crypto Engineering}
+\newcommand{\sID}{\texttt{secureID}}
+\newcommand{\tID}{\texttt{tokenID}}
+\newcommand{\ticket}{\texttt{ticket}}
+\newtcolorbox{alert}[1]{
+colback=red!5!white, colframe=red!75!white,fonttitle=\bfseries, title = #1}
+
+\newtcolorbox{commentbox}[1]{
+colback=black!5!white, colframe=black!75!white,fonttitle=\bfseries, title = #1}
+%**********************************************
+
+
+%**********************************************
+%* Please replace this with your name
+\newcommand{\studentname}{Firstname Lastname}
+%**********************************************
+\newcommand{\handout}[3]{\heading{#1}{#2}{\studentname}{}{Project: #3}}
+
+%**********************************************
+%* The document starts here
+\begin{document}\handout{4}{Winter Term, 2020/21}{SuperSAM Security Analysis}
+
+
+\section{Executive Summary}
+
+Please write a general overview explaining the major issues that you found. This should be fairly succinct and must not exceed 2 pages.
+
+\section{Specific points}
+
+Each subsection should cover one weakness/mistake. You must look at both the Implementation Note and the AES implementation. Every analysis must at least identify two problems in each of the two components and for at least one (per component) I would like you to make a serious effort to demonstrate a problem and suggest a fix. \\
+
+For each problem that you identify give a name and a clear reference to where it occurs as part of the subsection title. Then have paragraph that describes the problem; followed by further paragraphs detailing how to exploit it and how to fix it. \\
+
+Here is one example.
+\subsection{Implementation Note: Wrong Generator, Section 2.3. on Page 3}
+\paragraph{Problem Description:} Wrong Generator Value. The given DH Parameters are from RFC 3526; the prime was verbatim copied from the RFC, but upon double checking it turns out that the generator value in the RFC is given as {\R 2} rather than the value 3.
+\paragraph{Demonstrating this as a vulnerability:} A generator $g$ has the special property that it will generate the entire prime group, this means that for different $x$, $g^x$ will (eventually) generate all $p-1$ elements. This is important because it makes the DL problem in this group computationally infeasible (for any $p$ large enough). If an element $r$ is chosen that is not a generator, it is possible that it generates only a much smaller subgroup. In the worst case with very few (even just two) elements. In this subgroup, the DH problem is no longer difficult to solve.
+\paragraph{Proposed Improvement:} Use the standardised generator value of $2$.
+
+\begin{commentbox}{Example application of the marking scheme}
+Clearly a problem has been spotted here correctly: (1 mark out of 1 mark). \\
+There is a relatively clear description of the problem. Perhaps the biggest shortcoming in the description is that it is not specific enough w.r.t. the RFC (which page, section): (4 marks out of 5 marks).\\
+The demonstration of the problem is rather hand waving. A good demonstration could have been to consider if the value $3$ indeed has a low order using some maths tool package: (5 marks out of 10 marks).\\
+The improvement/fix is really super trivial in this case: (1 mark out of 10 marks).
+\end{commentbox}
+\end{document}
+
+

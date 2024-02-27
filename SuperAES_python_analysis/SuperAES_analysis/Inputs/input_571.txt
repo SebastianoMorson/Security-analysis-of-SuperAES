@@ -1,0 +1,5 @@
+Using simulator: Thumb Sim
+Using model: Hamming Weight
+Starting... (0.0%)
+wscslzimbcwpnsfhGenerated: 1 of 1 traces. (100.0%)
+Done!

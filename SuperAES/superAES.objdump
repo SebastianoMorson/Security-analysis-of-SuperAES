@@ -1,0 +1,284 @@
+
+superAES.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000001e0  00000000  00000000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  000001e0  000001e0  000011e0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          0000000c  000001e0  000001e0  000011e0  2**2
+                  ALLOC
+  3 .rodata       00000000  000001ec  000001e0  000011e0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .heap         00003c00  000001ec  000001ec  000011e0  2**0
+                  ALLOC
+  5 .stack        00002800  00003dec  00003dec  000011e0  2**0
+                  ALLOC
+  6 .ARM.attributes 0000002d  00000000  00000000  000011e0  2**0
+                  CONTENTS, READONLY
+  7 .comment      0000001e  00000000  00000000  0000120d  2**0
+                  CONTENTS, READONLY
+Contents of section .text:
+ 0000 00000100 5b000000 51000000 51000000  ....[...Q...Q...
+ 0010 51000000 51000000 51000000 51000000  Q...Q...Q...Q...
+ 0020 51000000 51000000 51000000 51000000  Q...Q...Q...Q...
+ 0030 51000000 51000000 51000000 51000000  Q...Q...Q...Q...
+ 0040 51000000 51000000 51000000 51000000  Q...Q...Q...Q...
+ 0050 fee772b6 70470adf 00be00f0 03f8fff7  ..r.pG..........
+ 0060 fbff0000 10b58cb0 00f0a0f8 03000a93  ................
+ 0070 00f09cf8 03000993 0a9b0a9a 11001800  ................
+ 0080 00f022f8 00f092f8 02002323 6b441a70  ..".......##kD.p
+ 0090 00230b93 0ee02324 6c4400f0 1ff80300  .#....#$lD......
+ 00a0 23702323 6b441b78 1800fff7 d2ff0b9b  #p##kD.x........
+ 00b0 01330b93 0b9b034a 9342ecdd 00231800  .3.....J.B...#..
+ 00c0 0cb010bd 1fa10700 024a034b 10601960  .........J.K.`.`
+ 00d0 7047c046 e0010000 e4010000 82b02e4b  pG.F...........K
+ 00e0 1b681a00 01231340 01932b4b 1b685a08  .h...#.@..+K.hZ.
+ 00f0 294b1a60 019b012b 06d1274b 1b68274a  )K.`...+..'K.h'J
+ 0100 5a40254b 1a6005e0 254b1b68 234a5a40  Z@%K.`..%K.h#JZ@
+ 0110 234b1a60 204b1b68 1a000123 13400193  #K.` K.h...#.@..
+ 0120 1d4b1b68 5a081c4b 1a60019b 012b06d1  .K.hZ..K.`...+..
+ 0130 194b1b68 194a5a40 174b1a60 05e0184b  .K.h.JZ@.K.`...K
+ 0140 1b68164a 5a40164b 1a60164b 1b681a00  .h.JZ@.K.`.K.h..
+ 0150 01231340 0193134b 1b685a08 114b1a60  .#.@...K.hZ..K.`
+ 0160 019b012b 06d10f4b 1b680f4a 5a400d4b  ...+...K.h.JZ@.K
+ 0170 1a6005e0 0a4b1b68 0b4a5a40 084b1a60  .`...K.h.JZ@.K.`
+ 0180 054b1b68 dab2074b 1b68dbb2 5340dbb2  .K.h...K.h..S@..
+ 0190 180002b0 7047c046 e0010000 5cd3bcb4  ....pG.F....\...
+ 01a0 e8010000 e4010000 e3c25b7a 82b00b4b  ..........[z...K
+ 01b0 0193019b 1b781a00 019b1b78 08331b02  .....x.....x.3..
+ 01c0 1a43019b 1b781033 1b041a43 019b1b78  .C...x.3...C...x
+ 01d0 18331b06 13431800 02b07047 00f1ffff  .3...C....pG....
+Contents of section .ARM.attributes:
+ 0000 412c0000 00616561 62690001 22000000  A,...aeabi.."...
+ 0010 05436f72 7465782d 4d300006 0c074d09  .Cortex-M0....M.
+ 0020 01120414 01150117 0318011a 02        .............   
+Contents of section .comment:
+ 0000 4743433a 20284172 63682052 65706f73  GCC: (Arch Repos
+ 0010 69746f72 79292031 332e322e 3000      itory) 13.2.0.  
+
+Disassembly of section .text:
+
+00000000 <_ram_start>:
+   0:	00010000 	.word	0x00010000
+   4:	0000005b 	.word	0x0000005b
+   8:	00000051 	.word	0x00000051
+   c:	00000051 	.word	0x00000051
+  10:	00000051 	.word	0x00000051
+  14:	00000051 	.word	0x00000051
+  18:	00000051 	.word	0x00000051
+  1c:	00000051 	.word	0x00000051
+  20:	00000051 	.word	0x00000051
+  24:	00000051 	.word	0x00000051
+  28:	00000051 	.word	0x00000051
+  2c:	00000051 	.word	0x00000051
+  30:	00000051 	.word	0x00000051
+  34:	00000051 	.word	0x00000051
+  38:	00000051 	.word	0x00000051
+  3c:	00000051 	.word	0x00000051
+  40:	00000051 	.word	0x00000051
+  44:	00000051 	.word	0x00000051
+  48:	00000051 	.word	0x00000051
+  4c:	00000051 	.word	0x00000051
+
+00000050 <die>:
+  50:	e7fe      	b.n	50 <die>
+
+00000052 <putchar>:
+  52:	b672      	cpsid	i
+  54:	4770      	bx	lr
+
+00000056 <fail>:
+  56:	df0a      	svc	10
+
+00000058 <success>:
+  58:	be00      	bkpt	0x0000
+
+0000005a <_start>:
+  5a:	f000 f803 	bl	64 <main>
+  5e:	f7ff fffb 	bl	58 <success>
+	...
+
+00000064 <main>:
+  64:	b510      	push	{r4, lr}
+  66:	b08c      	sub	sp, #48	@ 0x30
+  68:	f000 f8a0 	bl	1ac <get_rand>
+  6c:	0003      	movs	r3, r0
+  6e:	930a      	str	r3, [sp, #40]	@ 0x28
+  70:	f000 f89c 	bl	1ac <get_rand>
+  74:	0003      	movs	r3, r0
+  76:	9309      	str	r3, [sp, #36]	@ 0x24
+  78:	9b0a      	ldr	r3, [sp, #40]	@ 0x28
+  7a:	9a0a      	ldr	r2, [sp, #40]	@ 0x28
+  7c:	0011      	movs	r1, r2
+  7e:	0018      	movs	r0, r3
+  80:	f000 f822 	bl	c8 <init_lfsrs>
+  84:	f000 f892 	bl	1ac <get_rand>
+  88:	0002      	movs	r2, r0
+  8a:	2323      	movs	r3, #35	@ 0x23
+  8c:	446b      	add	r3, sp
+  8e:	701a      	strb	r2, [r3, #0]
+  90:	2300      	movs	r3, #0
+  92:	930b      	str	r3, [sp, #44]	@ 0x2c
+  94:	e00e      	b.n	b4 <main+0x50>
+  96:	2423      	movs	r4, #35	@ 0x23
+  98:	446c      	add	r4, sp
+  9a:	f000 f81f 	bl	dc <getRand>
+  9e:	0003      	movs	r3, r0
+  a0:	7023      	strb	r3, [r4, #0]
+  a2:	2323      	movs	r3, #35	@ 0x23
+  a4:	446b      	add	r3, sp
+  a6:	781b      	ldrb	r3, [r3, #0]
+  a8:	0018      	movs	r0, r3
+  aa:	f7ff ffd2 	bl	52 <putchar>
+  ae:	9b0b      	ldr	r3, [sp, #44]	@ 0x2c
+  b0:	3301      	adds	r3, #1
+  b2:	930b      	str	r3, [sp, #44]	@ 0x2c
+  b4:	9b0b      	ldr	r3, [sp, #44]	@ 0x2c
+  b6:	4a03      	ldr	r2, [pc, #12]	@ (c4 <main+0x60>)
+  b8:	4293      	cmp	r3, r2
+  ba:	ddec      	ble.n	96 <main+0x32>
+  bc:	2300      	movs	r3, #0
+  be:	0018      	movs	r0, r3
+  c0:	b00c      	add	sp, #48	@ 0x30
+  c2:	bd10      	pop	{r4, pc}
+  c4:	0007a11f 	.word	0x0007a11f
+
+000000c8 <init_lfsrs>:
+  c8:	4a02      	ldr	r2, [pc, #8]	@ (d4 <init_lfsrs+0xc>)
+  ca:	4b03      	ldr	r3, [pc, #12]	@ (d8 <init_lfsrs+0x10>)
+  cc:	6010      	str	r0, [r2, #0]
+  ce:	6019      	str	r1, [r3, #0]
+  d0:	4770      	bx	lr
+  d2:	46c0      	nop			@ (mov r8, r8)
+  d4:	000001e0 	.word	0x000001e0
+  d8:	000001e4 	.word	0x000001e4
+
+000000dc <getRand>:
+  dc:	b082      	sub	sp, #8
+  de:	4b2e      	ldr	r3, [pc, #184]	@ (198 <getRand+0xbc>)
+  e0:	681b      	ldr	r3, [r3, #0]
+  e2:	001a      	movs	r2, r3
+  e4:	2301      	movs	r3, #1
+  e6:	4013      	ands	r3, r2
+  e8:	9301      	str	r3, [sp, #4]
+  ea:	4b2b      	ldr	r3, [pc, #172]	@ (198 <getRand+0xbc>)
+  ec:	681b      	ldr	r3, [r3, #0]
+  ee:	085a      	lsrs	r2, r3, #1
+  f0:	4b29      	ldr	r3, [pc, #164]	@ (198 <getRand+0xbc>)
+  f2:	601a      	str	r2, [r3, #0]
+  f4:	9b01      	ldr	r3, [sp, #4]
+  f6:	2b01      	cmp	r3, #1
+  f8:	d106      	bne.n	108 <getRand+0x2c>
+  fa:	4b27      	ldr	r3, [pc, #156]	@ (198 <getRand+0xbc>)
+  fc:	681b      	ldr	r3, [r3, #0]
+  fe:	4a27      	ldr	r2, [pc, #156]	@ (19c <getRand+0xc0>)
+ 100:	405a      	eors	r2, r3
+ 102:	4b25      	ldr	r3, [pc, #148]	@ (198 <getRand+0xbc>)
+ 104:	601a      	str	r2, [r3, #0]
+ 106:	e005      	b.n	114 <getRand+0x38>
+ 108:	4b25      	ldr	r3, [pc, #148]	@ (1a0 <getRand+0xc4>)
+ 10a:	681b      	ldr	r3, [r3, #0]
+ 10c:	4a23      	ldr	r2, [pc, #140]	@ (19c <getRand+0xc0>)
+ 10e:	405a      	eors	r2, r3
+ 110:	4b23      	ldr	r3, [pc, #140]	@ (1a0 <getRand+0xc4>)
+ 112:	601a      	str	r2, [r3, #0]
+ 114:	4b20      	ldr	r3, [pc, #128]	@ (198 <getRand+0xbc>)
+ 116:	681b      	ldr	r3, [r3, #0]
+ 118:	001a      	movs	r2, r3
+ 11a:	2301      	movs	r3, #1
+ 11c:	4013      	ands	r3, r2
+ 11e:	9301      	str	r3, [sp, #4]
+ 120:	4b1d      	ldr	r3, [pc, #116]	@ (198 <getRand+0xbc>)
+ 122:	681b      	ldr	r3, [r3, #0]
+ 124:	085a      	lsrs	r2, r3, #1
+ 126:	4b1c      	ldr	r3, [pc, #112]	@ (198 <getRand+0xbc>)
+ 128:	601a      	str	r2, [r3, #0]
+ 12a:	9b01      	ldr	r3, [sp, #4]
+ 12c:	2b01      	cmp	r3, #1
+ 12e:	d106      	bne.n	13e <getRand+0x62>
+ 130:	4b19      	ldr	r3, [pc, #100]	@ (198 <getRand+0xbc>)
+ 132:	681b      	ldr	r3, [r3, #0]
+ 134:	4a19      	ldr	r2, [pc, #100]	@ (19c <getRand+0xc0>)
+ 136:	405a      	eors	r2, r3
+ 138:	4b17      	ldr	r3, [pc, #92]	@ (198 <getRand+0xbc>)
+ 13a:	601a      	str	r2, [r3, #0]
+ 13c:	e005      	b.n	14a <getRand+0x6e>
+ 13e:	4b18      	ldr	r3, [pc, #96]	@ (1a0 <getRand+0xc4>)
+ 140:	681b      	ldr	r3, [r3, #0]
+ 142:	4a16      	ldr	r2, [pc, #88]	@ (19c <getRand+0xc0>)
+ 144:	405a      	eors	r2, r3
+ 146:	4b16      	ldr	r3, [pc, #88]	@ (1a0 <getRand+0xc4>)
+ 148:	601a      	str	r2, [r3, #0]
+ 14a:	4b16      	ldr	r3, [pc, #88]	@ (1a4 <getRand+0xc8>)
+ 14c:	681b      	ldr	r3, [r3, #0]
+ 14e:	001a      	movs	r2, r3
+ 150:	2301      	movs	r3, #1
+ 152:	4013      	ands	r3, r2
+ 154:	9301      	str	r3, [sp, #4]
+ 156:	4b13      	ldr	r3, [pc, #76]	@ (1a4 <getRand+0xc8>)
+ 158:	681b      	ldr	r3, [r3, #0]
+ 15a:	085a      	lsrs	r2, r3, #1
+ 15c:	4b11      	ldr	r3, [pc, #68]	@ (1a4 <getRand+0xc8>)
+ 15e:	601a      	str	r2, [r3, #0]
+ 160:	9b01      	ldr	r3, [sp, #4]
+ 162:	2b01      	cmp	r3, #1
+ 164:	d106      	bne.n	174 <getRand+0x98>
+ 166:	4b0f      	ldr	r3, [pc, #60]	@ (1a4 <getRand+0xc8>)
+ 168:	681b      	ldr	r3, [r3, #0]
+ 16a:	4a0f      	ldr	r2, [pc, #60]	@ (1a8 <getRand+0xcc>)
+ 16c:	405a      	eors	r2, r3
+ 16e:	4b0d      	ldr	r3, [pc, #52]	@ (1a4 <getRand+0xc8>)
+ 170:	601a      	str	r2, [r3, #0]
+ 172:	e005      	b.n	180 <getRand+0xa4>
+ 174:	4b0a      	ldr	r3, [pc, #40]	@ (1a0 <getRand+0xc4>)
+ 176:	681b      	ldr	r3, [r3, #0]
+ 178:	4a0b      	ldr	r2, [pc, #44]	@ (1a8 <getRand+0xcc>)
+ 17a:	405a      	eors	r2, r3
+ 17c:	4b08      	ldr	r3, [pc, #32]	@ (1a0 <getRand+0xc4>)
+ 17e:	601a      	str	r2, [r3, #0]
+ 180:	4b05      	ldr	r3, [pc, #20]	@ (198 <getRand+0xbc>)
+ 182:	681b      	ldr	r3, [r3, #0]
+ 184:	b2da      	uxtb	r2, r3
+ 186:	4b07      	ldr	r3, [pc, #28]	@ (1a4 <getRand+0xc8>)
+ 188:	681b      	ldr	r3, [r3, #0]
+ 18a:	b2db      	uxtb	r3, r3
+ 18c:	4053      	eors	r3, r2
+ 18e:	b2db      	uxtb	r3, r3
+ 190:	0018      	movs	r0, r3
+ 192:	b002      	add	sp, #8
+ 194:	4770      	bx	lr
+ 196:	46c0      	nop			@ (mov r8, r8)
+ 198:	000001e0 	.word	0x000001e0
+ 19c:	b4bcd35c 	.word	0xb4bcd35c
+ 1a0:	000001e8 	.word	0x000001e8
+ 1a4:	000001e4 	.word	0x000001e4
+ 1a8:	7a5bc2e3 	.word	0x7a5bc2e3
+
+000001ac <get_rand>:
+ 1ac:	b082      	sub	sp, #8
+ 1ae:	4b0b      	ldr	r3, [pc, #44]	@ (1dc <get_rand+0x30>)
+ 1b0:	9301      	str	r3, [sp, #4]
+ 1b2:	9b01      	ldr	r3, [sp, #4]
+ 1b4:	781b      	ldrb	r3, [r3, #0]
+ 1b6:	001a      	movs	r2, r3
+ 1b8:	9b01      	ldr	r3, [sp, #4]
+ 1ba:	781b      	ldrb	r3, [r3, #0]
+ 1bc:	3308      	adds	r3, #8
+ 1be:	021b      	lsls	r3, r3, #8
+ 1c0:	431a      	orrs	r2, r3
+ 1c2:	9b01      	ldr	r3, [sp, #4]
+ 1c4:	781b      	ldrb	r3, [r3, #0]
+ 1c6:	3310      	adds	r3, #16
+ 1c8:	041b      	lsls	r3, r3, #16
+ 1ca:	431a      	orrs	r2, r3
+ 1cc:	9b01      	ldr	r3, [sp, #4]
+ 1ce:	781b      	ldrb	r3, [r3, #0]
+ 1d0:	3318      	adds	r3, #24
+ 1d2:	061b      	lsls	r3, r3, #24
+ 1d4:	4313      	orrs	r3, r2
+ 1d6:	0018      	movs	r0, r3
+ 1d8:	b002      	add	sp, #8
+ 1da:	4770      	bx	lr
+ 1dc:	fffff100 	.word	0xfffff100

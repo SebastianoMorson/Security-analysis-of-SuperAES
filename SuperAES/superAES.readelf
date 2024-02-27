@@ -1,0 +1,146 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           ARM
+  Version:                           0x1
+  Entry point address:               0x5b
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          5860 (bytes into file)
+  Flags:                             0x5000200, Version5 EABI, soft-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         1
+  Size of section headers:           40 (bytes)
+  Number of section headers:         12
+  Section header string table index: 11
+
+Section Headers:
+  [Nr] Name
+       Type            Addr     Off    Size   ES   Lk Inf Al
+       Flags
+  [ 0] 
+       NULL            00000000 000000 000000 00   0   0  0
+       [00000000]: 
+  [ 1] .text
+       PROGBITS        00000000 001000 0001e0 00   0   0  4
+       [00000006]: ALLOC, EXEC
+  [ 2] .data
+       PROGBITS        000001e0 0011e0 000000 00   0   0  1
+       [00000003]: WRITE, ALLOC
+  [ 3] .bss
+       NOBITS          000001e0 0011e0 00000c 00   0   0  4
+       [00000003]: WRITE, ALLOC
+  [ 4] .rodata
+       PROGBITS        000001ec 0011e0 000000 00   0   0  1
+       [00000003]: WRITE, ALLOC
+  [ 5] .heap
+       NOBITS          000001ec 0011e0 003c00 00   0   0  1
+       [00000003]: WRITE, ALLOC
+  [ 6] .stack
+       NOBITS          00003dec 0011e0 002800 00   0   0  1
+       [00000003]: WRITE, ALLOC
+  [ 7] .ARM.attributes
+       ARM_ATTRIBUTES  00000000 0011e0 00002d 00   0   0  1
+       [00000000]: 
+  [ 8] .comment
+       PROGBITS        00000000 00120d 00001e 01   0   0  1
+       [00000030]: MERGE, STRINGS
+  [ 9] .symtab
+       SYMTAB          00000000 00122c 000340 10  10  27  4
+       [00000000]: 
+  [10] .strtab
+       STRTAB          00000000 00156c 00011d 00   0   0  1
+       [00000000]: 
+  [11] .shstrtab
+       STRTAB          00000000 001689 00005a 00   0   0  1
+       [00000000]: 
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x001000 0x00000000 0x00000000 0x001e0 0x065ec RWE 0x1000
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .text .bss .heap .stack 
+
+There is no dynamic section in this file.
+
+There are no relocations in this file.
+
+There are no unwind sections in this file.
+
+Symbol table '.symtab' contains 52 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00000000     0 SECTION LOCAL  DEFAULT    1 .text
+     2: 000001e0     0 SECTION LOCAL  DEFAULT    2 .data
+     3: 000001e0     0 SECTION LOCAL  DEFAULT    3 .bss
+     4: 000001ec     0 SECTION LOCAL  DEFAULT    4 .rodata
+     5: 000001ec     0 SECTION LOCAL  DEFAULT    5 .heap
+     6: 00003dec     0 SECTION LOCAL  DEFAULT    6 .stack
+     7: 00000000     0 SECTION LOCAL  DEFAULT    7 .ARM.attributes
+     8: 00000000     0 SECTION LOCAL  DEFAULT    8 .comment
+     9: 00000000     0 FILE    LOCAL  DEFAULT  ABS startup.o
+    10: 00000051     0 FUNC    LOCAL  DEFAULT    1 die
+    11: 00000000     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    12: 00000050     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    13: 00000000     0 FILE    LOCAL  DEFAULT  ABS main.c
+    14: 00000064     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    15: 000000c4     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    16: 00000000     0 FILE    LOCAL  DEFAULT  ABS rand.c
+    17: 000001e0     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    18: 000001e4     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    19: 000001e8     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    20: 000000c8     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    21: 000000d4     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    22: 000000dc     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    23: 00000198     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    24: 00000000     0 FILE    LOCAL  DEFAULT  ABS elmo-funcs.c
+    25: 000001ac     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    26: 000001dc     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    27: 00000053     0 FUNC    GLOBAL DEFAULT    1 putchar
+    28: 00000057     0 FUNC    GLOBAL DEFAULT    1 fail
+    29: 00000059     0 FUNC    GLOBAL DEFAULT    1 success
+    30: 000001e0     0 NOTYPE  GLOBAL DEFAULT    1 _text_end
+    31: 00002800     0 NOTYPE  GLOBAL DEFAULT  ABS _min_stack_size
+    32: 000001e0     0 NOTYPE  GLOBAL DEFAULT    3 _bss_start
+    33: 00000000     0 NOTYPE  GLOBAL DEFAULT    1 _text_start
+    34: 00003dec     0 NOTYPE  GLOBAL DEFAULT    5 _heap_end
+    35: 000001ec     0 NOTYPE  GLOBAL DEFAULT    3 _bss_end
+    36: 000001ec     0 NOTYPE  GLOBAL DEFAULT    5 _heap_start
+    37: 00000000     0 NOTYPE  GLOBAL DEFAULT    1 _ram_start
+    38: 0000005b     0 FUNC    GLOBAL DEFAULT    1 _start
+    39: 000001e0     0 NOTYPE  GLOBAL DEFAULT    2 _data_start
+    40: 000001e8     4 OBJECT  GLOBAL DEFAULT    3 retrand
+    41: 000000dd   208 FUNC    GLOBAL DEFAULT    1 getRand
+    42: 000001e4     4 OBJECT  GLOBAL DEFAULT    3 lfsr31
+    43: 000001e0     0 NOTYPE  GLOBAL DEFAULT    2 _data_end
+    44: 00000065   100 FUNC    GLOBAL DEFAULT    1 main
+    45: 00010000     0 NOTYPE  GLOBAL DEFAULT    1 _stack_end
+    46: 000000c9    20 FUNC    GLOBAL DEFAULT    1 init_lfsrs
+    47: 00010000     0 NOTYPE  GLOBAL DEFAULT    1 _ram_end
+    48: 00003dec     0 NOTYPE  GLOBAL DEFAULT    6 _stack_start
+    49: 00003c00     0 NOTYPE  GLOBAL DEFAULT  ABS _min_heap_size
+    50: 000001ad    52 FUNC    GLOBAL DEFAULT    1 get_rand
+    51: 000001e0     4 OBJECT  GLOBAL DEFAULT    3 lfsr32
+
+No version information found in this file.
+Attribute Section: aeabi
+File Attributes
+  Tag_CPU_name: "Cortex-M0"
+  Tag_CPU_arch: v6S-M
+  Tag_CPU_arch_profile: Microcontroller
+  Tag_THUMB_ISA_use: Thumb-1
+  Tag_ABI_PCS_wchar_t: 4
+  Tag_ABI_FP_denormal: Needed
+  Tag_ABI_FP_exceptions: Needed
+  Tag_ABI_FP_number_model: IEEE 754
+  Tag_ABI_align_needed: 8-byte
+  Tag_ABI_enum_size: int

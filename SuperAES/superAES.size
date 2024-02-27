@@ -1,0 +1,13 @@
+superAES.elf  :
+section            size    addr
+.text               480       0
+.data                 0     480
+.bss                 12     480
+.rodata               0     492
+.heap             15360     492
+.stack            10240   15852
+.ARM.attributes      45       0
+.comment             30       0
+Total             26167
+
+
